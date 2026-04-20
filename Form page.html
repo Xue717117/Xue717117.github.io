@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Celebrity World</title>
+	<meta name="color-scheme" content="light dark">
+	<div class="line-gutter-backdrop"></div>
+	<link href='style.css' type='text/css' rel='stylesheet'>
+	<meta name = 'description' content="A celebrity website introducing stars from China, South Korea and the UK.">
+	<meta name = 'keywords' content="celebrity, stars, Xue Zhiqian, SEVENTEEN, Millie Bobby Brown">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+
+	<style>
+		body {
+           	display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: black; 
+            font-family:Merriweather;
+        }
+
+		a{
+            background-color:#e8f0fe;
+            color:white;
+            padding:10px 20px;
+            margin-left:-8px;
+            text-decoration: none;
+		}
+        a:hover{
+       		
+            background-color:white;
+            color:black;
+        }
+        nav{
+    		position:fixed;
+    		top:0;
+		}
+
+		 .content {
+            margin-top: 20px; 
+            max-width: 500px;
+            width: 100%;
+        }
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+<body>
+<nav>
+	<a href='index.html'>Chinese Star</a>
+	<a href='page2.html'>Korean Stars</a>
+	<a href='page3.html'>British Star</a>
+	<a href='Form page.html'>Form page</a><br>
+</nav>
+<div class='content'>
+	<h1 style='font-family:Merriweather'>Form page</h1>
+	<h2 class="form-title">SHARE YOUR EXPERIENCES!!!</h2>
+
+	<form action='123.py'>
+		<label for='name'>Name:</label>
+		<input type='text' name='name'><br>
+
+		<label for='name'>Email:</label>
+		<input type='email' name='email'><br>
+
+		<label for='gender'>Gender:</label>
+		<select>
+			<option name='Male'>Male</option>
+			<option name='female'>Female</option>
+		</select><br>
+
+		<label for="rating">Rate your experience (1-5) </label>
+        <input type="radio" name="score" value="1" id="s1">
+		<label for="s1">1</label>
+		<input type="radio" name="score" value="2" id="s2">
+		<label for="s2">2</label>
+		<input type="radio" name="score" value="3" id="s3">
+		<label for="s3">3</label>
+		<input type="radio" name="score" value="4" id="s4">
+		<label for="s4">4</label>
+		<input type="radio" name="score" value="5" id="s5">
+		<label for="s5">5</label><br>
+
+        
+        <label for="improve">How could we improve?</label>
+        <input type='text' name='improve'><br>
+
+		<input type='submit'>
+
+
+	</form>
+</div>
+</body>
+</html>
+
