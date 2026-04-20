@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Celebrity World</title>
+	<meta name="color-scheme" content="light dark">
+	<link href='style.css' type='text/css' rel='stylesheet'>
+	<meta name = 'description' content="A celebrity website introducing stars from China, South Korea and the UK.">
+	<meta name = 'keywords' content="celebrity, stars, Xue Zhiqian, SEVENTEEN, Millie Bobby Brown">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+	<style>
+		.album-section {
+		    width:100%;
+		    padding: 50px 5%;
+		}
+		.hero {
+		    margin-top: 30px;
+		    position: relative;
+		    width: 100%;
+    		height: 500px;
+    		margin: 0; 
+   			padding: 0; 
+    		overflow: hidden;
+		    display: flex; 
+		    justify-content: center;
+		    align-items: center;
+		}
+		.hero img {
+		    width: 100%;
+		    height: 100%;
+		    object-fit: cover; 
+		    display: block;
+		}
+
+		.hero-text {
+		    position: absolute;
+		    top: 50%;
+		    left: 10%;
+		    margin-top: -40px;
+		    font-size: 80px;
+		    color: white;
+		    font-weight: bold;
+		    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+		}
+		.album-grid {
+		    display: grid;
+		    flex-wrap: wrap;
+		    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		    gap: 30px;
+			}
+
+		.album-card {
+		    border-radius: 8px;
+		    overflow: hidden;
+		    transition: transform 0.3s;
+		}
+		.album-card:hover {
+		    transform: translateY(-10px);
+		}
+		.album-info {
+		    padding: 15px;
+		    background-color:white;
+		}
+
+		.album-info h3 {
+		    font-size: 20px;
+		    margin-bottom: 5px;
+		}
+
+		.album-info p {
+		    color: grey;
+		    font-size: 0.9rem;
+		}
+		table {
+		    width: 100%;
+		    border-collapse: collapse;
+		    background-color: white;
+		    border-radius: 8px;
+		    overflow: hidden;
+		    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+		}
+		th, td {
+		    padding: 15px 20px;
+		    text-align: left;
+		}
+
+		th {
+		    background-color: #A9C9DA;
+		    color: white;
+		    font-weight: bold;
+		}
+
+		tr:nth-child(even) {
+		    background-color: #f8f8f8;
+		}
+
+		.video-container {
+		    max-width: 1000px;
+		    margin: 0 auto;
+		    border-radius: 8px;
+		    overflow: hidden;
+		    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+		}
+
+		video {
+		    width: 100%;
+		    display: block;
+		}
+
+	</style>
+</head>
+<body>
+<nav>
+	<a href='page1.html'>Chinese Star</a>
+	<a href='page2.html'>Korean Stars</a>
+	<a href='page3.html'>British Star</a>
+	<a href='Form page.html'>Form page</a><br>
+</nav>
+<div class='content'>
+	
+	<h1 style='font-family:Dancing Script'>Xue Zhiqian</h1>
+	<section id="home" class="hero">
+        <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/00f1fc82c31c4055b551e78ca11d949a~tplv-dy-aweme-images:q75.webp?biz_tag=aweme_images&from=327834062&lk3s=138a59ce&s=PackSourceEnum_SEARCH&sc=image&se=false&x-expires=1778446800&x-signature=x3L0uJ2lYWpcxdWG6Sus89kBNXU%3D" alt="Joker Xue Banner">
+        <div class="hero-text">Joker Xue</div>
+    </section>
+
+    <section id="albums" class="album-section">
+        <h2>Popular Albums</h2>
+        <div class="album-grid">
+            <div class="album-card">
+                <img src="https://upload.wikimedia.org/wikipedia/zh/0/0e/%E8%96%9B%E4%B9%8B%E8%B0%A6_%E6%80%AA%E5%92%96.jpg" alt="Album 1">
+                <div class="album-info">
+                    <h3>怪咖 Eccentric</h3>
+                    <p>Released: 2016.06.07</p>
+                </div>
+            </div>
+            <div class="album-card">
+                <img src="https://upload.wikimedia.org/wikipedia/zh/4/45/%E8%96%9B%E4%B9%8B%E8%B0%A6_%E5%B0%98.jpg" alt="Album 2">
+                <div class="album-info">
+                    <h3>尘 Dust</h3>
+                    <p>Released: 2019.12.27</p>
+                </div>
+            </div>
+            <div class="album-card">
+                <img src="https://upload.wikimedia.org/wikipedia/zh/2/20/%E8%96%9B%E4%B9%8B%E8%B0%A6_%E5%A4%A9%E5%A4%96%E6%9D%A5%E7%89%A9.jpg" alt="Album 3">
+                <div class="album-info">
+                    <h3>天外来物 Alien</h3>
+                    <p>Released: 2020.12.31</p>
+                </div>
+            </div>
+            <div class="album-card">
+                <img src="https://upload.wikimedia.org/wikipedia/zh/a/a5/%E8%96%9B%E4%B9%8B%E8%B0%A6_%E6%84%8F%E5%A4%96.jpg" alt="Album 4">
+                <div class="album-info">
+                    <h3>意外 Accident</h3>
+                    <p>Released: 2013.11.11</p>
+                </div>
+            </div>
+            <div class="album-card">
+                <img src="https://cdn-images.dzcdn.net/images/cover/83c26d87b05656f04fe2ebb8250ae451/0x1900-000000-80-0-0.jpg" alt="Album 5">
+                <div class="album-info">
+                    <h3>渡 Crossing</h3>
+                    <p>Released: 2017.11.28</p>
+                </div>
+            </div>
+            <div class="album-card">
+                <img src="https://upload.wikimedia.org/wikipedia/zh/3/3b/%E8%96%9B%E4%B9%8B%E8%B0%A6_%E5%88%9D%E5%AD%A6%E8%80%85.jpg" alt="Album 6">
+                <div class="album-info">
+                    <h3>初学者 Beginner</h3>
+                    <p>Released: 2016.07.18</p>
+                </div>
+            </div>
+            <div class="album-card">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ba/1e/51/ba1e5106-db66-af4a-f704-cb0bfd2b3063/9787798506518.jpg/1200x630bb.jpg" alt="Album 7">
+                <div class="album-info">
+                    <h3>绅士 Gentleman</h3>
+                    <p>Released: 2015.06.05</p>
+                </div>
+            </div>
+            <div class="album-card">
+                <img src="https://upload.wikimedia.org/wikipedia/zh/2/20/%E8%96%9B%E4%B9%8B%E8%B0%A6_%E6%97%A0%E6%95%B0.jpg" alt="Album 8">
+                <div class="album-info">
+                    <h3>无数 Countless</h3>
+                    <p>Released: 2023.09.20</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <section id="concerts" class="section">
+        <div class="container">
+            <h2>Concert Records</h2>
+            <div class="concert-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Concert Name</th>
+                            <th>Total Shows</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	<tr>
+                            <td>2026-03-20 To Present</td>
+                            <td>万兽之王 Joker Xue "King of Beasts" World Tour</td>
+                            <td>13 Shows(ongoing)</td>
+                        </tr>
+                        <tr>
+                            <td>2021-10-23 To 2025-02-15</td>
+                            <td>天外来物 Joker Xue "Alien" World Tour</td>
+                            <td>147 Shows</td>
+                        </tr>
+                        <tr>
+                            <td>2018-07-14 To 2019-04-07</td>
+                            <td>摩天大楼 Joker Xue "Skyscraper" World Tour</td>
+                            <td>23 Shows</td>
+                        </tr>
+                        <tr>
+                            <td>2017-04-22 To 2017-07-22</td>
+                            <td>我好像在哪见过你 Joker Xue "I Think I've Seen You" Tour</td>
+                            <td>10 Shows</td>
+                        </tr>
+                        <tr>
+                            <td>2008-12-20</td>
+                            <td>谦年传说 Xue's Legend Concert</td>
+                            <td>1 Show</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section><br>
+
+    <section id="videos" class="section bg-gray">
+        <div class="container">
+            <h2>Concert Highlights</h2><br>
+            <div class="video-container">
+                <video controls poster="https://attach.setn.com/newsimages/2024/05/01/4630620-PH.jpg">
+                    <source src="XueConcert.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    
+
+</div>
+</body>
+</html>
