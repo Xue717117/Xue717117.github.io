@@ -15,13 +15,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <style>
           .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
+            padding: 0 15px;
         }
 
           .member-grid {
             display: grid;
             gap: 15px;
+            grid-template-columns: repeat(4, 1fr);
+            margin-top: 20px;
         }
 
 
@@ -29,25 +32,26 @@
             border-radius: 8px;
             overflow: hidden;
             transition: transform 0.3s ;
+            text-align: center; 
+            background: white;
         }
 
         .member-card img {
             width: 100%;
+            width:200px
             object-fit: cover;
             display: block;
-            margin-bottom: 8px;
         }
 
         .member-name {
-            font-size: 12px;
+            font-size: 14px;
             color: #333;
             font-weight: bold;
+            padding: 10px 0; 
         }
         .intro-with-photo {
             gap: 50px;
         }
-
-       
 
         .intro-photo {
             width: 60%;
@@ -64,7 +68,7 @@
     <a href='page3.html'>British Star</a>
     <a href='Form page.html'>Form page</a><br>
 </nav>
-<div class='content'>
+<div class='content container'>
     <h1 style='font-family:Dancing Script'>Seventeen</h1>
     <section id="home" class="hero">
         <img src="https://pledis.co.kr/resources/_data/file/designImages/1746794063681df64f23f84.jpg" alt="Joker Xue Banner">
