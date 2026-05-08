@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Interactive Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+	<style>
+		* {
+            font-family: "Bodoni Moda", serif;
+        }
+
+        body {
+            background-color: whitesmoke;
+            padding: 20px;
+            max-width: 600px; 
+            margin: 0 auto; 
+        }
+
+        .section {
+            background-color: white;
+            width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid lightgray;
+            text-align: left;
+        }
+
+        label {
+            font-size: 16px;
+            margin: 5px;
+            display: inline-block;
+        }
+        button {
+            background:royalblue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+        button:hover {
+            background:plum;
+        }
+        .output {
+            margin-top: 15px;
+            color: indianred;
+            font-weight: bold;
+        }
+	</style>
+</head>
+<body>
+    <div class="section" id="card1">
+    	<h2>1. Password Strength Checker</h2>
+        <label>Password:</label>
+    	<input type='text' id='psw'><br>
+    	<button onclick='checkpsw()'>Check Password</button>
+    	<h3 id='result' class="output"></h3>
+    </div>
+
+    <div class="section" id="card2">
+        <h2>2. Security Clearance System</h2>
+        <label>Age:</label>
+        <input type="number" id="age"><br>
+        <label>Employee ID:</label>
+        <input type="text" id="Id"><br>
+        <label>Years of Experience:</label>
+        <input type="number" id="YOE"><br>
+        <button onclick="checkclearance()">Check Clearance</button>
+        <p class="output" id="output"></p>
+    </div>
+
+    <div class="section" id="card3">
+        <h2>3. Signup / Login Simulator</h2>
+        <label>Username:</label>
+        <input type='text' id='name'><br>
+        <label>Password:</label>
+        <input type='text' id='psw2'><br>
+        <button onclick='signup()'>register</button>
+        <button onclick='login()'>signin</button>
+        <p class='output' id='login'></p>
+    </div>
+
+    <div class="section" id="card4">
+        <h2>4. Dark Mode Button</h2>
+        <button onclick="dark()">Dark Mode</button>
+    </div>
+
+    <div class="section" id="card5">
+        <h2>5. Cyber Threat Detector</h2>
+        <label>Enter Website URL:</label>
+        <input type="text" id="urlinput"><br>
+        <button onclick="analyze()">Analyze Website</button>
+        <div id="urloutput" class="output"></div>
+    </div>
+        
+	<script>
+		function checkpsw(){
+			let psw = document.getElementById('psw').value;
+			let result='';
+			if(psw.length<12){
+				result +='Password too short<br>';
+			}
+			if(!/[A-Z]/.test(psw)){
+				result +='Missing uppercase letter<br>'
+			}
+			if(!/[a-z]/.test(psw)) {
+				result +='Missing lowercase letter<br>'
+			}
+			if (!/[!@#$%^&*\|;:",./?]/.test(psw)){
+				result +='Missing punctuation <br>'
+			}
+			if(psw.includes(' ')){
+				result += 'Password should not contain any spaces<br>'
+			}
+			if(result==''){
+				result= 'Strong Password<br>'
+			}
+			document.getElementById('result').innerHTML = result;
+
+		}
+
+
+		function checkclearance() {
+            let age = parseInt(document.getElementById("age").value);
+            let id = document.getElementById("Id").value;
+            let yoe = parseInt(document.getElementById("YOE").value);
+            let otp = document.getElementById("output")
+
+            if (!id.startsWith("EMP")||id.startsWith("SEC")) {
+                otp.innerHTML = "Invalid employee ID"
+            }
+            else if (age >= 18 && id.startsWith("EMP")) {
+                otp.innerHTML = "Access Granted: Level 1"
+            } else if (age >= 21 && yoe >= 2 && id.startsWith("EMP")) {
+                otp.innerHTML = "Access Granted: Level 2"
+            } else if (age >= 25 && yoe >= 5 && id.startsWith("SEC")) {
+                otp.innerHTML = "Access Granted: Level 3"
+            } else {
+                otp.innerHTML = "Access Denied"
+            }
+        }
+
+        function signup(){
+            let user_input = document.getElementById('name').value;
+            let psw_input = document.getElementById('psw2').value;
+
+            user_stored = user_input;
+            pass_stored = psw_input;
+
+            document.getElementById("login").innerText = "Sign up successful";
+        }
+        function login(){
+            let user_current = document.getElementById('name').value;
+            let pass_current = document.getElementById('psw2').value;
+
+            if (user_current !== user_stored) {
+                document.getElementById("login").innerText = "Username not found"
+            }
+            else if (pass_current !== pass_stored) {
+                document.getElementById("login").innerText = "Incorrect password"
+            }
+            else {
+                document.getElementById("login").innerText = "Login Successful"
+            }
+        }
+
+        function dark() {
+            if (document.body.style.backgroundColor == "black") {
+                document.body.style.backgroundColor = "whitesmoke"
+                document.body.style.color = "black"
+                document.getElementById("card1").style.backgroundColor = "white"
+                document.getElementById("card2").style.backgroundColor = "white"
+                document.getElementById("card3").style.backgroundColor = "white"
+                document.getElementById("card4").style.backgroundColor = "white"
+                document.getElementById("card5").style.backgroundColor = "white"
+            } 
+            else {
+                document.body.style.backgroundColor = "black"
+                document.body.style.color = "white"
+                document.getElementById("card1").style.backgroundColor = "black"
+                document.getElementById("card2").style.backgroundColor = "black"
+                document.getElementById("card3").style.backgroundColor = "black"
+                document.getElementById("card4").style.backgroundColor = "black"
+                document.getElementById("card5").style.backgroundColor = "black"
+            }
+        }
+
+        function analyze() {
+            let url = document.getElementById("urlinput").value
+            let output = document.getElementById("urloutput")
+            let Suspicious=url.includes("free-money") || url.includes("hack") || url.includes("winner") || url.includes("bitcoin")
+            let Safe=url.startsWith('https://')
+
+            if (! Safe&& Suspicious) {
+                output.innerHTML = "Dangerous Website"
+            }
+            else if (Suspicious) {
+                output.innerHTML = "Suspicious Website"
+            }
+            else if (Safe) {
+                output.innerHTML = "Safe Website"
+            }
+            else{
+                output.innerHTML = "unkown"
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>
